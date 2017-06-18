@@ -4,7 +4,7 @@ body {
   padding: 0;
   font-family: 'Fira Sans', sans-serif;
   font-size: 16px;
-  line-height: 1.5;
+  /*line-height: 1.5;*/
   color: #000000;
   background: url(img/background.png);
   background-size: 2%;
@@ -39,6 +39,10 @@ body {
   color: #3e4247;
   margin-left: 2rem;
   margin-right: 0;
+}
+
+.complexes-article {
+  padding-bottom: 4rem;
 }
 
 .banner {
@@ -140,10 +144,8 @@ body {
 .footer {
   background: #111111;
   color: #ffffff;
-  margin-top: 4.5rem;
   padding-top: 2rem;
   padding-bottom: 0;
-  margin-top: 2rem;
   padding-bottom: 1.5rem;
 }
 

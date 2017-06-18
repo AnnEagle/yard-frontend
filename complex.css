@@ -1,0 +1,352 @@
+.complex-page-wrapper {
+  background-color: white;
+}
+
+/*-------------------------------------------*/
+
+.complex-header {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.complex-header-name {
+  font-size: 2rem;
+  font-family: 'Philosopher';
+  line-height: 1.13;
+  color: #3e4247;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-bottom: 8px;
+}
+
+.complex-header-adress {
+  font-size: 14px;
+  font-family: 'Fira Sans';
+  line-height: 1.57;
+  font-weight: 300;
+  color: #a9afb6;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-bottom: 0;
+}
+
+.complex-header-fav-button {
+  border-radius: 2px;
+  border: solid 1px #e0e0e1;
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 1;
+  color: #00779a;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  /*background-color: #FFFFFF;*/
+}
+
+/*** carousel ***/
+
+.carousel-img {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.carousel-button-wrapper {
+  position: absolute;
+  margin: -3rem 0 0 0.5rem;
+}
+
+.carousel-button {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 2px;
+  border: 0;
+  background-color: #00779a;
+  font-family: 'Fira Sans';
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 1;
+  color: #ffffff;
+}
+
+/*** didgest ***/
+
+.complex-digest {
+}
+
+/*** ***/
+
+.complex-digest-short-info { 
+  margin-top: 24px;
+}
+
+.complex-digest-short-info-column-wrapper {
+  display: flex;
+}
+
+.complex-digest-short-info-column {
+  margin-bottom: 1.5rem;
+  margin-right: 3rem;
+}
+
+.complex-digest-title {
+  font-size: 1.5rem;
+  font-family: 'Philosopher';
+  font-weight: bold;
+  line-height: 1.25;
+  color: #3e4247;
+  margin-top: 0;
+  margin-bottom: 0;
+
+}
+
+.complex-digest-subtitle {
+  font-family: 'Fira Sans';
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.57;
+  text-align: left;
+  color: #a9afb6;
+}
+
+.complex-digest-line {
+  margin: 0;
+  border: none;
+  height: 0px;
+  border-bottom: 1px solid #e0e0e1;
+}
+
+/*** ***/
+
+.complex-digest-specification {
+  margin-top: 2rem; 
+}
+
+.complex-digest-specifications-wrapper {
+  margin-top: 0.5rem;
+}
+
+.complex-digest-specification-block {
+  display: flex;
+  margin-top: 0.5rem;
+  margin-bottom: 0px;
+  margin-right: 1.75rem;
+}
+
+.complex-digest-specification-subject
+.digest-specification-value {
+  width: 50%;
+}
+
+.complex-digest-specification-subject {
+  font-family: 'Fira Sans';
+  font-size: 1rem;
+  line-height: 1.38;
+  color: #a9afb6;
+  width: 50%;
+}
+
+.complex-digest-specification-value {
+  font-family: 'Fira Sans'
+  font-size: 1rem;
+  line-height: 1.56;
+  color: #3e4247;
+  font-weight: 500;
+  width: 50%;
+}
+
+/*** ***/
+
+.complex-digest-description {
+  margin-top: 49px;
+}
+
+.complex-digest-description-text {
+  margin: 0;
+  font-family: 'Fira Sans';
+  font-size: 1rem;
+  color: #3e4247;
+  line-height: 1.5625rem;
+  padding-bottom: 1.5625rem;
+}
+
+/*** ***/
+
+.complex-digest-infrastructure {
+  padding-top: 2rem;
+  padding-bottom: 56px;
+}
+
+.complex-digest-infrastructure-wrapper {
+  margin-top: 1rem;
+}
+
+.complex-digest-infrastructure-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.1;
+  color: #3e4247;
+  font-family: 'Philosopher';
+  margin: 0px;
+}
+
+.complex-digest-infrastructure-text {
+  font-family: 'Fira Sans';
+  font-size: 1rem;
+  line-height: 1.38;
+  color: #3e4247;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+/*** offers ***/
+
+.complex-offers {
+  background-color: #f4f5f9;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.complex-offers-title {
+  text-align: center;
+  font-family: Philosopher;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.13;
+  color: #3e4247;
+  margin: 0;
+}
+
+.complex-offers-wrapper {
+  margin-top: 1.5rem;
+}
+
+.complex-offer {
+  background-color: #ffffff;
+  padding: 1.5rem 2rem;
+}
+
+.complex-offer-title {
+  font-family: Philosopher;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.13;
+  text-align: left;
+  color: #3e4247;
+  margin: 0px;
+}
+
+.complex-offer-prop-label {
+  line-height: 1.38;
+  text-align: left;
+  color: #a9afb6;
+  margin: 0px;
+  margin-top: 1.5rem;
+}
+
+.complex-offer-prop-value {
+  line-height: 1.38;
+  text-align: left;
+  color: #3e4247;
+  margin: 0px;
+  margin-top: 10px;
+}
+
+.complex-offer-button-wrapper {
+  margin-top: 2rem;
+}
+
+.complex-offer-button {
+  text-align: center;;
+  border-radius: 2px;
+  background-color: #000000;
+  font-family: "Fira Sans";
+  font-size: 16px;
+  line-height: 1;
+  text-align: center;
+  color: #ffffff;
+  padding: 12px 2rem;
+  border: none;
+}
+
+/** district **/
+
+.complex-district {
+  padding-bottom: 4rem;
+}
+
+.complex-district-back {
+  padding-top: 4rem;
+  background-color: #3e4247;
+  padding-bottom: 13.5rem;
+}
+
+.complex-district-introduce {
+  margin-top: 7.25rem;
+}
+
+.complex-district-name {
+  font-family: Philosopher;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #a9afb6;
+  margin: 0px;
+}
+
+.complex-district-description {
+  font-family: Philosopher;
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.25;
+  color: #ffffff;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.complex-district-guide-link {
+  text-decoration: none;
+  text-align: left;
+  color: #00779a;
+}
+
+.complex-district-image {
+  width: 100%;
+}
+
+.complex-district-details {
+  margin-top: -9.625rem;
+}
+
+.complex-district-details-map {
+  width: 100%;
+  height: 303px;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
+}
+
+.complex-district-detail-neighborhood-block {
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
+  background-color: white;
+}
+
+.complex-district-details-neighborhood {
+  border-top: solid 1px #e0e0e1;
+  padding-left: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.complex-district-details-neighborhood-name {
+  font-weight: 500;
+  line-height: 1.38;
+  color: #3e4247;
+  margin: 0px;
+}
+
+.complex-district-details-neighborhood-distance {
+  line-height: 1.38;
+  text-align: left;
+  color: #a9afb6;
+  margin: 0px;
+  margin-top: 8px;
+}
