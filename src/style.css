@@ -11,7 +11,7 @@ body {
   background-color: #EAEBF0;
   background-repeat: repeat;
 }
-
+/*-------------------------------------*/
 .header {
   background-color: #ffffff;
   border-bottom: 1px solid #eaebf0;
@@ -40,11 +40,11 @@ body {
   margin-left: 2rem;
   margin-right: 0;
 }
-
+/*---------------------------------------------*/
 .complexes-article {
   padding-bottom: 4rem;
 }
-
+/*--------------------------------------------*/
 .banner {
   background-color: #161616;
   text-align: center;
@@ -58,7 +58,7 @@ body {
   width: 419px;
   height: 131px;
 }
-
+/*--------------------------------------------*/
 .introduction {
   margin-left: 8rem;
   margin-right: 8rem;
@@ -94,7 +94,7 @@ body {
   border-radius: 2px;
   margin-top: 16px;
 }
-
+/*--------------------------------------------*/
 .card {
   text-decoration: none;
   display: flex;
@@ -138,7 +138,7 @@ body {
   margin-top: 0.5rem;
   margin-right: 100.7px;
 }
-
+/*--------------------------------------------*/
 /* Footer */
 
 .footer {
