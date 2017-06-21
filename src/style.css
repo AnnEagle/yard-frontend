@@ -141,37 +141,37 @@ body {
 /*--------------------------------------------*/
 /* Footer */
 
-.footer {
+/*.footer {
   background: #111111;
   color: #ffffff;
   padding-top: 2rem;
   padding-bottom: 0;
   padding-bottom: 1.5rem;
 }
-
-.footer-title {
+*/
+./*footer-title {
   font-weight: bold;
   color: #646971;
   font-size: 14px;
   margin-top: 1rem;
   margin-bottom: 0;
-}
-
+}*/
+/*
 .footer-contact {
   margin-bottom: 0;
   margin-top: 0.5rem;
   color: #a9afb6;
   font-size: 14px;
   font-weight: 300;
-}
+}*/
 
-.footer-line {
+/*.footer-line {
   margin: 0;
   border: none;
   height: 2px;
   background-color: #3e4247;
-}
-
+}*/
+/*
 .footer-column-link {
   font-size: 14px;
   font-weight: 300;
@@ -180,7 +180,7 @@ body {
   display: block;
   margin-top: 8px;
   text-decoration: none;
-}
+}*/
 
 .footer-accent-line {
   margin-top: 1rem;
