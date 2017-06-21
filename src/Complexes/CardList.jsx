@@ -1,16 +1,65 @@
 import React from 'react';
 import styled from 'styled-components'
+import { Grid, Row, Col } from "react-flexbox-grid";
+import { Link } from "react-router-dom";
 
-export default () => {
+const Card = styled(Link)`
+text-decoration: none;
+  display: flex;
+  margin-bottom: 3rem;
+  background: #ffffff;
+  border-bottom: solid 2px #646971;
+
+   &:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+   }
+`;
+const Texts = styled.div`
+`;
+
+
+const Img = styled.img`
+  float: left;
+  width: 464px;
+  height: 350px;
+  padding-right: 16.3px;
+`;
+
+
+const Name = styled.p`
+  margin-top: 1.5rem;
+  font-family: 'Monaco';
+  color: #646971;
+`;
+
+const Address = styled.h3`
+  font-size: 2.5rem;
+  color: #000000;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  font-weight: bold;
+  line-height: 1.4;
+`;
+
+const Info = styled.p`
+  color: #3e4247;
+  margin-top: 0.5rem;
+  margin-right: 100.7px;
+`;
+
+
+
+export default props => {
   return (
-  	    <a href="" className="card">
-        <img src="img/bitmap.png" alt="bitmap" className="card-img" />
-        <div className="card-texts">
-          <p className="card-name">SOUTH BEACH, SAN FRANCISCO</p>
-          <h3 className="card-address">764 Metropolitan Avenue</h3>
-          <p className="card-info">The Lewis Steel Building is a masterful industrial conversion located in the heart of Williamsburg. Located at 76 North 4th Street, the former 1930's steel factory has been transformed into 83 individually unique and luxury loft apartments.</p>
-        </div>
-      </a>
-
+    <Grid>
+      <Card to="/">
+        <Img src="{props.img}" />
+        <Texts>
+          <Name>{props.name}</Name>
+          <Address>{props.address}</Address>
+          <Info>{props.info}</Info>
+        </Texts>
+      </Card>
+    </Grid>
   );
 };
