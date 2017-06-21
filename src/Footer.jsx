@@ -48,6 +48,7 @@ const ColumnLink = styled(Link)`
   margin-top: 8px;
   text-decoration: none;
 `;
+
 const AccentColumnLink = styled(ColumnLink)`
   margin-top: 1rem;
 `;

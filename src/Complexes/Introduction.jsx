@@ -3,7 +3,7 @@ import { Grid, Row, Col } from "react-flexbox-grid";
 import styled from "styled-components";
 
 const Description = styled.p`
-	text-align: center;
+  text-align: center;
   font-size: 1rem;
   color: #3E4247;
   display: block;
@@ -39,17 +39,17 @@ const Button = styled.button`
 `;
 
 export default () => {
-	return (
-		<Introduction>
-			<Title>Discover Our New Developments</Title>
-			<Col md={8}>
-				<Description>
-					Compass brings a modern approach to new development marketing and
-					sales. From boutique rental conversions to luxurious ground-up
-					condominiums, browse our portfolio of current offerings.
-				</Description>
-			</Col>
-			<Button>Contact The Team</Button>
-		</Introduction>
-	);
+  return (
+    <Introduction>
+      <Title>Discover Our New Developments</Title>
+      <Col md={8}>
+        <Description>
+          Compass brings a modern approach to new development marketing and
+          sales. From boutique rental conversions to luxurious ground-up
+          condominiums, browse our portfolio of current offerings.
+        </Description>
+      </Col>
+      <Button>Contact The Team</Button>
+    </Introduction>
+  );
 };

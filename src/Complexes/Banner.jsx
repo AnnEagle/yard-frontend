@@ -1,6 +1,6 @@
-import React from 'react';
-import banner_image from '../img/compass-development-logo.png'
-import styled from 'styled-components'
+import React from "react";
+import banner_image from "../img/compass-development-logo.png";
+import styled from "styled-components";
 
 const Wrapper = styled.section`
   background-color: #161616;
@@ -16,11 +16,10 @@ const Banner = styled.img`
   height: 131px;
 `;
 
-
 export default () => {
   return (
-  <Wrapper>
-    <Banner src={banner_image} />
-  </Wrapper>
+    <Wrapper>
+      <Banner src={banner_image} />
+    </Wrapper>
   );
 };
