@@ -39,13 +39,11 @@ export default () => {
   return (
     <Introduction>
       <Title>Discover Our New Developments</Title>
-      <div>
         <Description>
           Compass brings a modern approach to new development marketing and
           sales. From boutique rental conversions to luxurious ground-up
           condominiums, browse our portfolio of current offerings.
         </Description>
-      </div>
       <Button>Contact The Team</Button>
     </Introduction>
   );
