@@ -1,5 +1,4 @@
 import React from "react";
-import { Grid, Row, Col } from "react-flexbox-grid";
 import styled from "styled-components";
 
 const Description = styled.p`
@@ -15,9 +14,7 @@ const Introduction = styled.section`
   margin-left: 8rem;
   margin-right: 8rem;
   margin-bottom: 4rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
 `;
 
 const Title = styled.h2`
@@ -42,13 +39,13 @@ export default () => {
   return (
     <Introduction>
       <Title>Discover Our New Developments</Title>
-      <Col md={8}>
+      <div>
         <Description>
           Compass brings a modern approach to new development marketing and
           sales. From boutique rental conversions to luxurious ground-up
           condominiums, browse our portfolio of current offerings.
         </Description>
-      </Col>
+      </div>
       <Button>Contact The Team</Button>
     </Introduction>
   );

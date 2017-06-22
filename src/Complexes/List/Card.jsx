@@ -12,17 +12,15 @@ const Card = styled(Link)`
 
   &:hover {
     box-shadow: 0 0 20px rgba(0, 0, 0, .3);
-  }
 `;
 
 const Texts = styled.div`
 `;
 
 const Img = styled.img`
-  float: left;
-  width: 464px;
+  width: 484px;
   height: 350px;
-  padding-right: 16.3px;
+  padding-right: 1rem;
 `;
 
 const Name = styled.p`
@@ -52,7 +50,7 @@ export default props => {
   return (
     <Grid>
       <Card to="/">
-        <Img src={props.img} />
+        <Img src={`${process.env.PUBLIC_URL}/img/${props.id}pic.png`} />
         <Texts>
           <Name>{props.name}</Name>
           <Address>{props.address}</Address>

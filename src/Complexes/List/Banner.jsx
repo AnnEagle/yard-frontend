@@ -1,5 +1,4 @@
 import React from "react";
-import banner_image from "../img/compass-development-logo.png";
 import styled from "styled-components";
 
 const Wrapper = styled.section`
@@ -19,7 +18,7 @@ const Banner = styled.img`
 export default () => {
   return (
     <Wrapper>
-      <Banner src={banner_image} />
+      <Banner src={`${process.env.PUBLIC_URL}/img/compass-development-logo.png`} />
     </Wrapper>
   );
 };
