@@ -54,7 +54,7 @@ export default props => {
         <Texts>
           <Name>{props.name}</Name>
           <Address>{props.address}</Address>
-          <Info>{props.info}</Info>
+          <Info>{props.children}</Info>
         </Texts>
       </Card>
     </Grid>
