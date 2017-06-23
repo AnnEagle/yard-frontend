@@ -49,7 +49,7 @@ const Info = styled.p`
 export default props => {
   return (
     <Grid>
-      <Card to="/">
+      <Card to="/complex">
         <Img src={`${process.env.PUBLIC_URL}/img/${props.id}pic.png`} />
         <Texts>
           <Name>{props.name}</Name>
