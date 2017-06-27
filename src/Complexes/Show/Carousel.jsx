@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { Grid, Row, Col } from "react-flexbox-grid";
+import React from 'react';
+import styled from 'styled-components';
+import { Grid, Row } from 'react-flexbox-grid';
 
 const Carousel = styled.section`
 `;
@@ -28,28 +28,26 @@ const Button = styled.button`
   color: #ffffff;
 `;
 
-export default () => {
-  return (
-    <Carousel>
-      <Wrapper>
-        <img src={`${process.env.PUBLIC_URL}/img/bitmap1-2.png`} />
-        <img src={`${process.env.PUBLIC_URL}/img/bitmap2-2.png`} />
-        <img src={`${process.env.PUBLIC_URL}/img/bitmap3-2.png`} />
-        <img src={`${process.env.PUBLIC_URL}/img/bitmap4-2.png`} />
-        <img src={`${process.env.PUBLIC_URL}/img/bitmap5-2.jpg`} />
-        <img src={`${process.env.PUBLIC_URL}/img/bitmap1-2.png`} />
-        <img src={`${process.env.PUBLIC_URL}/img/bitmap2-2.png`} />
-        <img src={`${process.env.PUBLIC_URL}/img/bitmap3-2.png`} />
-        <img src={`${process.env.PUBLIC_URL}/img/bitmap4-2.png`} />
-        <img src={`${process.env.PUBLIC_URL}/img/bitmap5-2.jpg`} />
-      </Wrapper>
-      <Grid>
-        <Row>
-          <ButtonWrapper>
-            <Button>41 фотография</Button>
-          </ButtonWrapper>
-        </Row>
-      </Grid>
-    </Carousel>
+export default () => (
+  <Carousel>
+    <Wrapper>
+      <img src={`${process.env.PUBLIC_URL}/img/bitmap1-2.png`} alt="1" />
+      <img src={`${process.env.PUBLIC_URL}/img/bitmap2-2.png`} alt="2" />
+      <img src={`${process.env.PUBLIC_URL}/img/bitmap3-2.png`} alt="3" />
+      <img src={`${process.env.PUBLIC_URL}/img/bitmap4-2.png`} alt="4" />
+      <img src={`${process.env.PUBLIC_URL}/img/bitmap5-2.jpg`} alt="5" />
+      <img src={`${process.env.PUBLIC_URL}/img/bitmap1-2.png`} alt="1" />
+      <img src={`${process.env.PUBLIC_URL}/img/bitmap2-2.png`} alt="2" />
+      <img src={`${process.env.PUBLIC_URL}/img/bitmap3-2.png`} alt="3" />
+      <img src={`${process.env.PUBLIC_URL}/img/bitmap4-2.png`} alt="4" />
+      <img src={`${process.env.PUBLIC_URL}/img/bitmap5-2.jpg`} alt="5" />
+    </Wrapper>
+    <Grid>
+      <Row>
+        <ButtonWrapper>
+          <Button>41 фотография</Button>
+        </ButtonWrapper>
+      </Row>
+    </Grid>
+  </Carousel>
   );
-};

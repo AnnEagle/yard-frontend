@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import { Grid, Row, Col } from "react-flexbox-grid";
+import React from 'react';
+import styled from 'styled-components';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 const Specification = styled.div`
-  padding-top: 2rem; 
+  padding-top: 2rem;
   background-color: #ffffff;
 `;
 
@@ -45,58 +45,56 @@ const Title = styled.h2`
   margin-bottom: 0;
 `;
 
-export default () => {
-  return (
-    <Specification>
-      <Grid>
-        <Title>Характеристики</Title>
-        <Wrapper>
-          <Row>
-            <Col md={4}>
-              <Block>
-                <Label>Количество квартир:</Label>
-                <Value>1 503</Value>
-              </Block>
-              <Block>
-                <Label>Статус:</Label>
-                <Value>Квартиры</Value>
-              </Block>
-              <Block>
-                <Label>Цены:</Label>
-                <Value>от 5.3 до 143.5 млн</Value>
-              </Block>
-            </Col>
-            <Col md={4}>
-              <Block>
-                <Label>Количество квартир:</Label>
-                <Value>1 503</Value>
-              </Block>
-              <Block>
-                <Label>Количество квартир:</Label>
-                <Value>1 503</Value>
-              </Block>
-              <Block>
-                <Label>Количество квартир:</Label>
-                <Value>1 503</Value>
-              </Block>
-            </Col>
-            <Col md={4}>
-              <Block>
-                <Label>Количество квартир:</Label>
-                <Value>1 503</Value>
-              </Block>
-              <Block>
-                <Label>Количество квартир:</Label>
-                <Value>1 503</Value>
-              </Block>
-              <Block>
-                <Label>Количество квартир:</Label>
-                <Value>1 503</Value>
-              </Block>
-            </Col>
-          </Row>
-        </Wrapper>
-      </Grid>
-    </Specification>
+export default () => (
+  <Specification>
+    <Grid>
+      <Title>Характеристики</Title>
+      <Wrapper>
+        <Row>
+          <Col md={4}>
+            <Block>
+              <Label>Количество квартир:</Label>
+              <Value>1 503</Value>
+            </Block>
+            <Block>
+              <Label>Статус:</Label>
+              <Value>Квартиры</Value>
+            </Block>
+            <Block>
+              <Label>Цены:</Label>
+              <Value>от 5.3 до 143.5 млн</Value>
+            </Block>
+          </Col>
+          <Col md={4}>
+            <Block>
+              <Label>Количество квартир:</Label>
+              <Value>1 503</Value>
+            </Block>
+            <Block>
+              <Label>Количество квартир:</Label>
+              <Value>1 503</Value>
+            </Block>
+            <Block>
+              <Label>Количество квартир:</Label>
+              <Value>1 503</Value>
+            </Block>
+          </Col>
+          <Col md={4}>
+            <Block>
+              <Label>Количество квартир:</Label>
+              <Value>1 503</Value>
+            </Block>
+            <Block>
+              <Label>Количество квартир:</Label>
+              <Value>1 503</Value>
+            </Block>
+            <Block>
+              <Label>Количество квартир:</Label>
+              <Value>1 503</Value>
+            </Block>
+          </Col>
+        </Row>
+      </Wrapper>
+    </Grid>
+  </Specification>
   );
-};

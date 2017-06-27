@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { Grid, Row, Col } from "react-flexbox-grid";
+import React from 'react';
+import styled from 'styled-components';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 const Heading = styled.section`
   padding-top: 1.5rem;
@@ -43,22 +43,20 @@ const Button = styled.button`
   background: transparent;
 `;
 
-export default () => {
-  return (
-    <Heading>
-      <Grid>
-        <Row between="md">
-          <Col md={8}>
-            <Name>Жилой комплекс «Полянка/44»</Name>
-            <Address>
+export default () => (
+  <Heading>
+    <Grid>
+      <Row between="md">
+        <Col md={8}>
+          <Name>Жилой комплекс «Полянка/44»</Name>
+          <Address>
               Район Якиманка, улица Большая Полянка, дом 44 • 119180
             </Address>
-          </Col>
-          <Col>
-            <Button>В избранное</Button>
-          </Col>
-        </Row>
-      </Grid>
-    </Heading>
+        </Col>
+        <Col>
+          <Button>В избранное</Button>
+        </Col>
+      </Row>
+    </Grid>
+  </Heading>
   );
-};

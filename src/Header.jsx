@@ -1,8 +1,8 @@
-import React from "react";
-import { Grid, Row, Col } from "react-flexbox-grid";
-import Compass_logo from "./img/compass-logo.png";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
+import React from 'react';
+import styled from 'styled-components';
+import { Grid } from 'react-flexbox-grid';
+import { Link } from 'react-router-dom';
+import compassLogo from './img/compass-logo.png';
 
 const Header = styled.header`
   background-color: #ffffff;
@@ -31,19 +31,17 @@ const NavLink = styled(Link)`
   margin-right: 0;
 `;
 
-export default () => {
-  return (
-    <Header>
-      <Grid>
-        <Content>
-          <Logo src={Compass_logo} />
-          <Nav>
-            <NavLink to="/">Купить</NavLink>
-            <NavLink to="/">Снять</NavLink>
-            <NavLink to="/">Наши Агенты</NavLink>
-          </Nav>
-        </Content>
-      </Grid>
-    </Header>
+export default () => (
+  <Header>
+    <Grid>
+      <Content>
+        <Logo src={compassLogo} />
+        <Nav>
+          <NavLink to="/">Купить</NavLink>
+          <NavLink to="/">Снять</NavLink>
+          <NavLink to="/">Наши Агенты</NavLink>
+        </Nav>
+      </Content>
+    </Grid>
+  </Header>
   );
-};

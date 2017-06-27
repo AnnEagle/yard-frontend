@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { Grid, Row, Col } from "react-flexbox-grid";
+import React from 'react';
+import styled from 'styled-components';
+import { Row } from 'react-flexbox-grid';
 
 const Offer = styled.div`
   background-color: #ffffff;
@@ -51,19 +51,17 @@ const Button = styled.button`
   border: none;
 `;
 
-export default props => {
-  return (
-    <Offer>
-      <Title>{props.count}-комнатные квартиры</Title>
-      <Label>Площадь</Label>
-      <Value>От {props.square.min} до {props.square.max} м²`</Value>
-      <Label>Стоимость</Label>
-      <Value>от {props.price.min} до {props.price.max} млн руб</Value>
-      <Row center="md">
-        <Wrapper>
-          <Button>Посмотреть предложения</Button>
-        </Wrapper>
-      </Row>
-    </Offer>
+export default props => (
+  <Offer>
+    <Title>{props.count}-комнатные квартиры</Title>
+    <Label>Площадь</Label>
+    <Value>От {props.square.min} до {props.square.max} м²`</Value>
+    <Label>Стоимость</Label>
+    <Value>от {props.price.min} до {props.price.max} млн руб</Value>
+    <Row center="md">
+      <Wrapper>
+        <Button>Посмотреть предложения</Button>
+      </Wrapper>
+    </Row>
+  </Offer>
   );
-};

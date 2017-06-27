@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import { Grid, Row, Col } from "react-flexbox-grid";
-import { Link } from "react-router-dom";
+import React from 'react';
+import styled from 'styled-components';
+import { Grid } from 'react-flexbox-grid';
+import { Link } from 'react-router-dom';
 
 const Card = styled(Link)`
   text-decoration: none;
@@ -46,17 +46,14 @@ const Info = styled.p`
   margin-right: 100.7px;
 `;
 
-export default props => {
-  return (
-    <Grid>
-      <Card to="/complex">
-        <Img src={`${process.env.PUBLIC_URL}/img/${props.id}pic.png`} />
-        <Texts>
-          <Name>{props.name}</Name>
-          <Address>{props.address}</Address>
-          <Info>{props.children}</Info>
-        </Texts>
-      </Card>
-    </Grid>
-  );
-};
+export default props =>
+  (<Grid>
+    <Card to="/complex">
+      <Img src={`${process.env.PUBLIC_URL}/img/${props.id}pic.png`} />
+      <Texts>
+        <Name>{props.name}</Name>
+        <Address>{props.address}</Address>
+        <Info>{props.children}</Info>
+      </Texts>
+    </Card>
+  </Grid>);

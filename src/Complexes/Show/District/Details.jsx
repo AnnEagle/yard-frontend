@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { Grid, Row, Col } from "react-flexbox-grid";
+import React from 'react';
+import styled from 'styled-components';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 const Details = styled.div`
   margin-top: -154px;
@@ -39,32 +39,30 @@ const Img = styled.img`
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
 `;
 
-export default () => {
-  return (
-    <Details>
-      <Grid>
-        <Row>
-          <Col md={6}>
-            <Img src={`${process.env.PUBLIC_URL}/img/map.png`} />
-          </Col>
-          <Col md={6}>
-            <Block>
-              <Neighborhood>
-                <Name>Красный Октябрь</Name>
-                <Distance>24 минуты, 6 км</Distance>
-              </Neighborhood>
-              <Neighborhood>
-                <Name>World class</Name>
-                <Distance>2 минуты, 300 м</Distance>
-              </Neighborhood>
-              <Neighborhood>
-                <Name>Третьяковская галерея</Name>
-                <Distance>14 минут, 4 км</Distance>
-              </Neighborhood>
-            </Block>
-          </Col>
-        </Row>
-      </Grid>
-    </Details>
+export default () => (
+  <Details>
+    <Grid>
+      <Row>
+        <Col md={6}>
+          <Img src={`${process.env.PUBLIC_URL}/img/map.png`} />
+        </Col>
+        <Col md={6}>
+          <Block>
+            <Neighborhood>
+              <Name>Красный Октябрь</Name>
+              <Distance>24 минуты, 6 км</Distance>
+            </Neighborhood>
+            <Neighborhood>
+              <Name>World class</Name>
+              <Distance>2 минуты, 300 м</Distance>
+            </Neighborhood>
+            <Neighborhood>
+              <Name>Третьяковская галерея</Name>
+              <Distance>14 минут, 4 км</Distance>
+            </Neighborhood>
+          </Block>
+        </Col>
+      </Row>
+    </Grid>
+  </Details>
   );
-};

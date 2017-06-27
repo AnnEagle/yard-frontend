@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import { Grid, Row, Col } from "react-flexbox-grid";
-import Offer from "./Offer";
+import React from 'react';
+import styled from 'styled-components';
+import { Grid, Row, Col } from 'react-flexbox-grid';
+import Offer from './Offer';
 
 const Offers = styled.section`
   background-color: #f4f5f9;
@@ -23,37 +23,23 @@ const Wrapper = styled.div`
   margin-top: 1.5rem;
 `;
 
-export default () => {
-  return (
-    <Offers>
-      <Grid>
-        <Title>Предложения в ЖК «Полянка/44»</Title>
-        <Wrapper>
-          <Row>
-            <Col md={4}>
-              <Offer
-                count={1}
-                square={{min:59, max:120}}
-                price={{min:20.3, max:84.2}}
-              />
-            </Col>
-            <Col md={4}>
-              <Offer
-                count={2}
-                square={{min:59, max:120}}
-                price={{min:20.3, max:84.2}}
-              />
-            </Col>
-            <Col md={4}>
-              <Offer
-                count={3}
-                square={{min:59, max:120}}
-                price={{min:20.3, max:84.2}}
-              />
-            </Col>
-          </Row>
-        </Wrapper>
-      </Grid>
-    </Offers>
+export default () => (
+  <Offers>
+    <Grid>
+      <Title>Предложения в ЖК «Полянка/44»</Title>
+      <Wrapper>
+        <Row>
+          <Col md={4}>
+            <Offer count={1} square={{ min: 59, max: 120 }} price={{ min: 20.3, max: 84.2 }} />
+          </Col>
+          <Col md={4}>
+            <Offer count={2} square={{ min: 59, max: 120 }} price={{ min: 20.3, max: 84.2 }} />
+          </Col>
+          <Col md={4}>
+            <Offer count={3} square={{ min: 59, max: 120 }} price={{ min: 20.3, max: 84.2 }} />
+          </Col>
+        </Row>
+      </Wrapper>
+    </Grid>
+  </Offers>
   );
-};

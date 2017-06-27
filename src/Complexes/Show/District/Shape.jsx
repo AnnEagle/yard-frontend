@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import { Grid, Row, Col } from "react-flexbox-grid";
-import { Link } from "react-router-dom";
+import React from 'react';
+import styled from 'styled-components';
+import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Link } from 'react-router-dom';
 
 const Back = styled.div`
   padding-top: 4rem;
@@ -40,29 +40,27 @@ const Img = styled.img`
   width: 100%;
 `;
 
-export default () => {
-  return (
-    <Back>
-      <Grid>
-        <Row>
-          <Col md={6}>
-            <Introduce>
-              <Name>
+export default () => (
+  <Back>
+    <Grid>
+      <Row>
+        <Col md={6}>
+          <Introduce>
+            <Name>
                 Якиманка
               </Name>
-              <Description>
+            <Description>
                 Исторический центр Москвы в двух километрах от Кремля
               </Description>
-              <GuideLink to="/">
+            <GuideLink to="/">
                 Гид по Якиманке →
               </GuideLink>
-            </Introduce>
-          </Col>
-          <Col md={6}>
-            <Img src={`${process.env.PUBLIC_URL}/img/polyanka-photo.png`} />
-          </Col>
-        </Row>
-      </Grid>
-    </Back>
+          </Introduce>
+        </Col>
+        <Col md={6}>
+          <Img src={`${process.env.PUBLIC_URL}/img/polyanka-photo.png`} />
+        </Col>
+      </Row>
+    </Grid>
+  </Back>
   );
-};

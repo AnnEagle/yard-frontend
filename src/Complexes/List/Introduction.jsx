@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Description = styled.p`
   text-align: center;
@@ -21,7 +21,7 @@ const Title = styled.h2`
   font-size: 1.5rem;
   margin: 0 0 0.5rem 0;
   color: #3E4247;
-  padding-top: 4rem; 
+  padding-top: 4rem;
 `;
 
 const Button = styled.button`
@@ -35,16 +35,14 @@ const Button = styled.button`
   margin-top: 16px;
 `;
 
-export default () => {
-  return (
-    <Introduction>
-      <Title>Discover Our New Developments</Title>
-      <Description>
+export default () => (
+  <Introduction>
+    <Title>Discover Our New Developments</Title>
+    <Description>
         Compass brings a modern approach to new development marketing and
         sales. From boutique rental conversions to luxurious ground-up
         condominiums, browse our portfolio of current offerings.
       </Description>
-      <Button>Contact The Team</Button>
-    </Introduction>
+    <Button>Contact The Team</Button>
+  </Introduction>
   );
-};

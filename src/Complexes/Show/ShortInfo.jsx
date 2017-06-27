@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { Grid, Row, Col } from "react-flexbox-grid";
+import React from 'react';
+import styled from 'styled-components';
+import { Grid } from 'react-flexbox-grid';
 
 const ShortInfo = styled.div`
   padding-top: 24px;
@@ -28,6 +28,7 @@ const Title = styled.h2`
 `;
 
 const Subtitle = styled.small`
+  display: block;
   font-family: 'Fira Sans';
   font-size: 14px;
   font-weight: 300;
@@ -43,26 +44,29 @@ const Line = styled.hr`
   border-bottom: 1px solid #e0e0e1;
 `;
 
-export default () => {
-  return (
-    <ShortInfo>
-      <Grid>
-        <Wrapper>
-          <Column>
-            <Title>950</Title>
-            <Title><Subtitle>предложений</Subtitle></Title>
-          </Column>
-          <Column>
-            <Title>John McAslan + Partners</Title>
-            <Title><Subtitle>архитектор</Subtitle></Title>
-          </Column>
-          <Column>
-            <Title>Группа «ПСН»</Title>
-            <Title><Subtitle>застройщик</Subtitle></Title>
-          </Column>
-        </Wrapper>
-        <Line />
-      </Grid>
-    </ShortInfo>
-  );
-};
+export default () =>
+  (<ShortInfo>
+    <Grid>
+      <Wrapper>
+        <Column>
+          <Title>
+            950
+            <Subtitle>предложений</Subtitle>
+          </Title>
+        </Column>
+        <Column>
+          <Title>
+            John McAslan + Partners
+            <Subtitle>архитектор</Subtitle>
+          </Title>
+        </Column>
+        <Column>
+          <Title>
+            Группа «ПСН»
+            <Subtitle>застройщик</Subtitle>
+          </Title>
+        </Column>
+      </Wrapper>
+      <Line />
+    </Grid>
+  </ShortInfo>);

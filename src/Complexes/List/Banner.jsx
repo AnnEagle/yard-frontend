@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Wrapper = styled.section`
   background-color: #161616;
@@ -15,10 +15,7 @@ const Banner = styled.img`
   height: 131px;
 `;
 
-export default () => {
-  return (
-    <Wrapper>
-      <Banner src={`${process.env.PUBLIC_URL}/img/compass-development-logo.png`} />
-    </Wrapper>
-  );
-};
+export default () =>
+  (<Wrapper>
+    <Banner src={`${process.env.PUBLIC_URL}/img/compass-development-logo.png`} />
+  </Wrapper>);
