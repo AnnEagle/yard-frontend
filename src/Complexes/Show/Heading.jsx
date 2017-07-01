@@ -43,20 +43,26 @@ const Button = styled.button`
   background: transparent;
 `;
 
-export default () => (
-  <Heading>
+function getLocation({ subLocalityName, street, house, postalCode }) {
+  return `${subLocalityName ? `${subLocalityName}, ` : ''}
+          ${street ? `${street}, ` : ''}
+          ${house ? `${house}, ` : ''}
+          ${postalCode ? ` • ${postalCode}` : ''}`;
+}
+
+export default props =>
+  (<Heading>
     <Grid>
       <Row between="md">
         <Col md={8}>
-          <Name>Жилой комплекс «Полянка/44»</Name>
+          <Name>{props.name}</Name>
           <Address>
-              Район Якиманка, улица Большая Полянка, дом 44 • 119180
-            </Address>
+            {getLocation(props.location)}
+          </Address>
         </Col>
         <Col>
           <Button>В избранное</Button>
         </Col>
       </Row>
     </Grid>
-  </Heading>
-  );
+  </Heading>);

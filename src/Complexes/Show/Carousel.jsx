@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Grid, Row } from 'react-flexbox-grid';
+import { getImage } from '../../api';
 
 const Carousel = styled.section`
 `;
@@ -28,19 +29,10 @@ const Button = styled.button`
   color: #ffffff;
 `;
 
-export default () => (
-  <Carousel>
+export default props =>
+  (<Carousel>
     <Wrapper>
-      <img src={`${process.env.PUBLIC_URL}/img/bitmap1-2.png`} alt="1" />
-      <img src={`${process.env.PUBLIC_URL}/img/bitmap2-2.png`} alt="2" />
-      <img src={`${process.env.PUBLIC_URL}/img/bitmap3-2.png`} alt="3" />
-      <img src={`${process.env.PUBLIC_URL}/img/bitmap4-2.png`} alt="4" />
-      <img src={`${process.env.PUBLIC_URL}/img/bitmap5-2.jpg`} alt="5" />
-      <img src={`${process.env.PUBLIC_URL}/img/bitmap1-2.png`} alt="1" />
-      <img src={`${process.env.PUBLIC_URL}/img/bitmap2-2.png`} alt="2" />
-      <img src={`${process.env.PUBLIC_URL}/img/bitmap3-2.png`} alt="3" />
-      <img src={`${process.env.PUBLIC_URL}/img/bitmap4-2.png`} alt="4" />
-      <img src={`${process.env.PUBLIC_URL}/img/bitmap5-2.jpg`} alt="5" />
+      {props.images.map(image => <img src={getImage(image.id, 256)} alt="1" />)}
     </Wrapper>
     <Grid>
       <Row>
@@ -49,5 +41,4 @@ export default () => (
         </ButtonWrapper>
       </Row>
     </Grid>
-  </Carousel>
-  );
+  </Carousel>);
