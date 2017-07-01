@@ -53,8 +53,8 @@ function getMaxPrice(price) {
   return price ? price.to.rub : 0;
 }
 
-export default props => (
-  <Specification>
+export default props =>
+  (<Specification>
     <Grid>
       <Title>Характеристики</Title>
       <Wrapper>
@@ -70,7 +70,10 @@ export default props => (
             </Block>
             <Block>
               <Label>Цены:</Label>
-              <Value>от {getMinPrice(props.statistics.price)} до {getMaxPrice(props.statistics.price)} руб. </Value>
+              <Value>
+                от {getMinPrice(props.statistics.price)} до {getMaxPrice(props.statistics.price)}{' '}
+                руб.{' '}
+              </Value>
             </Block>
           </Col>
           <Col md={4}>
@@ -104,5 +107,4 @@ export default props => (
         </Row>
       </Wrapper>
     </Grid>
-  </Specification>
-  );
+  </Specification>);
