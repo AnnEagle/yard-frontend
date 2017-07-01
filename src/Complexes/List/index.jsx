@@ -10,11 +10,11 @@ const Article = styled.article`
   padding-bottom: 3rem;
 `;
 
-function getCard(complex) {
-  const { countryName, regionName } = complex.location;
-  const location = `${regionName}, ${countryName}`;
+function renderComplexCard(complex) {
+  const { regionName, street, house } = complex.location;
+  const location = `${regionName}, ${street}, ${house}`;
   const imageId = complex.images[0].id;
-  const imageUrl = getImage(imageId);
+  const imageUrl = getImage(imageId, 256);
 
   return <Card id={complex.id} name={complex.name} location={location} image={imageUrl} />;
 }
@@ -26,11 +26,13 @@ class ComplexesList extends Component {
   }
 
   componentDidMount() {
-    get('/complexes?filter[state]=public').then(json => this.setState(json));
+    get('/complexes?filter[state]=public').then(({ items: complexes = [] }) => {
+      this.setState({ complexes });
+    });
   }
 
   render() {
-    const complexes = this.state.items || [];
+    const complexes = this.state.complexes || [];
 
     return (
       <div>
@@ -38,7 +40,7 @@ class ComplexesList extends Component {
           <Banner />
           <Introduction />
           <Grid>
-            {complexes.map(complex => getCard(complex))}
+            {complexes.map(complex => renderComplexCard(complex))}
           </Grid>
         </Article>
       </div>
