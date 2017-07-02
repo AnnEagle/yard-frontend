@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import styled from 'styled-components';
 import { Grid, Row, Col } from 'react-flexbox-grid';
@@ -45,8 +47,20 @@ const Title = styled.h2`
   margin-bottom: 0;
 `;
 
-export default () => (
-  <Specification>
+function getMinPrice(price) {
+  return price ? price.from.rub : 0;
+}
+
+function getMaxPrice(price) {
+  return price ? price.to.rub : 0;
+}
+
+type SpecificationType = {
+  statistics: Object
+}
+
+export default (props: SpecificationType) =>
+  (<Specification>
     <Grid>
       <Title>Характеристики</Title>
       <Wrapper>
@@ -54,7 +68,7 @@ export default () => (
           <Col md={4}>
             <Block>
               <Label>Количество квартир:</Label>
-              <Value>1 503</Value>
+              <Value>{props.statistics.propertiesCount}</Value>
             </Block>
             <Block>
               <Label>Статус:</Label>
@@ -62,39 +76,41 @@ export default () => (
             </Block>
             <Block>
               <Label>Цены:</Label>
-              <Value>от 5.3 до 143.5 млн</Value>
+              <Value>
+                от {getMinPrice(props.statistics.price)} до {getMaxPrice(props.statistics.price)}{' '}
+                руб.{' '}
+              </Value>
             </Block>
           </Col>
           <Col md={4}>
             <Block>
               <Label>Количество квартир:</Label>
-              <Value>1 503</Value>
+              <Value>{props.statistics.propertiesCount}</Value>
             </Block>
             <Block>
               <Label>Количество квартир:</Label>
-              <Value>1 503</Value>
+              <Value>{props.statistics.propertiesCount}</Value>
             </Block>
             <Block>
               <Label>Количество квартир:</Label>
-              <Value>1 503</Value>
+              <Value>{props.statistics.propertiesCount}</Value>
             </Block>
           </Col>
           <Col md={4}>
             <Block>
               <Label>Количество квартир:</Label>
-              <Value>1 503</Value>
+              <Value>{props.statistics.propertiesCount}</Value>
             </Block>
             <Block>
               <Label>Количество квартир:</Label>
-              <Value>1 503</Value>
+              <Value>{props.statistics.propertiesCount}</Value>
             </Block>
             <Block>
               <Label>Количество квартир:</Label>
-              <Value>1 503</Value>
+              <Value>{props.statistics.propertiesCount}</Value>
             </Block>
           </Col>
         </Row>
       </Wrapper>
     </Grid>
-  </Specification>
-  );
+  </Specification>);

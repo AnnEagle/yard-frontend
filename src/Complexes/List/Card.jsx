@@ -1,4 +1,7 @@
+// @flow
+
 import React from 'react';
+import type { Children } from 'react';
 import styled from 'styled-components';
 import { Grid } from 'react-flexbox-grid';
 import { Link } from 'react-router-dom';
@@ -12,6 +15,7 @@ const Card = styled(Link)`
 
   &:hover {
     box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+  }
 `;
 
 const Texts = styled.div`
@@ -21,15 +25,16 @@ const Img = styled.img`
   width: 484px;
   height: 350px;
   padding-right: 1rem;
+  flex-shrink: 0;
 `;
 
-const Name = styled.p`
+const Location = styled.p`
   margin-top: 1.5rem;
   font-family: 'Monaco';
   color: #646971;
 `;
 
-const Address = styled.h3`
+const Name = styled.h3`
   font-family: 'Fira Sans', sans-serif;
   font-size: 2.5rem;
   color: #000000;
@@ -46,13 +51,21 @@ const Info = styled.p`
   margin-right: 100.7px;
 `;
 
-export default props =>
+type CardProps = {
+  id: number,
+  image: string,
+  location: string,
+  name: string,
+  children: Children
+}
+
+export default (props: CardProps) =>
   (<Grid>
-    <Card to="/complex">
-      <Img src={`${process.env.PUBLIC_URL}/img/${props.id}pic.png`} />
+    <Card to={`/complex/${props.id}`}>
+      <Img src={props.image} />
       <Texts>
+        <Location>{props.location}</Location>
         <Name>{props.name}</Name>
-        <Address>{props.address}</Address>
         <Info>{props.children}</Info>
       </Texts>
     </Card>

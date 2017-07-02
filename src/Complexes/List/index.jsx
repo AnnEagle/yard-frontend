@@ -1,42 +1,62 @@
-import React from 'react';
+// @flow
+
+import React, { Component } from 'react';
 import { Grid } from 'react-flexbox-grid';
 import styled from 'styled-components';
 import Card from './Card';
 import Banner from './Banner';
 import Introduction from './Introduction';
+import { get, getImage } from '../../api';
+import type { Complex as ComplexType } from '../types';
 
 const Article = styled.article`
   padding-bottom: 3rem;
 `;
 
-export default () =>
-  (<div>
-    <Article>
-      <Banner />
-      <Introduction />
-      <Grid>
-        <Card id={1} name="SOUTH BEACH, SAN FRANCISCO" address="764 Metropolitan Avenue">
-          The Lewis Steel Building is a masterful industrial conversion
-          located in the heart of Williamsburg.
-          Located at 76 North 4th Street, the former 1930&aposs steel factory
-          has been transformed into 83 individually unique and luxury loft
-          apartments.
-        </Card>
-        <Card id={2} name="MIDTOWN EAST, MANHATTAN" address="100 East 53rd Street">
-          One Hundred East Fifty Third Street by Foster + Partners is a
-          limited collection of modern residences in Midtown Manhattan&aposs
-          Cultural District.
-          The 94 residences ranging from alcove lofts to four bedrooms
-          within the 63-story tower are generously proportioned.
-        </Card>
-        <Card id={3} name="NOLITA, MANHATTAN" address="152 Elizabeth">
-          152 Elizabeth is an ultra-luxury condominium building—the first in
-          New York City designed by Japanese master architect Tadao Ando.
-          Located at the corner of Kenmare and Elizabeth Streets in Nolita,
-          the 32,000-square-foot building will stand as a profound
-          architectural statement and embrace the industrial character of
-          the neighborhood.
-        </Card>
-      </Grid>
-    </Article>
-  </div>);
+function renderComplexCard(complex: ComplexType) {
+  const { regionName, street, house } = complex.location;
+  const location = `${regionName ? `${regionName}, ` : ''}
+                    ${street}
+                    ${house ? `${house}` : ''}`;
+  const imageId = complex.images[0].id;
+  const imageUrl = getImage(imageId, 256);
+
+  return (
+    <Card id={complex.id} name={complex.name} location={location} image={imageUrl}>
+      text
+    </Card>
+  );
+}
+
+class ComplexesList extends Component {
+  state = {
+    items: [],
+  };
+  state: {
+    complexes: Array<ComplexType>,
+  };
+
+  componentDidMount() {
+    get('/complexes?filter[state]=public').then(({ items: complexes = [] }) => {
+      this.setState({ complexes });
+    });
+  }
+
+  render() {
+    const complexes = this.state.complexes || [];
+
+    return (
+      <div>
+        <Article>
+          <Banner />
+          <Introduction />
+          <Grid>
+            {complexes.map(complex => renderComplexCard(complex))}
+          </Grid>
+        </Article>
+      </div>
+    );
+  }
+}
+
+export default ComplexesList;

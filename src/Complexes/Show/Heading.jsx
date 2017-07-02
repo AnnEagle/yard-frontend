@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import styled from 'styled-components';
 import { Grid, Row, Col } from 'react-flexbox-grid';
@@ -43,20 +45,31 @@ const Button = styled.button`
   background: transparent;
 `;
 
-export default () => (
-  <Heading>
+function getLocation({ subLocalityName, street, house, postalCode }) {
+  return `${subLocalityName ? `${subLocalityName}, ` : ''}
+          ${street ? `${street}, ` : ''}
+          ${house ? `${house}, ` : ''}
+          ${postalCode ? ` • ${postalCode}` : ''}`;
+}
+
+type HeadingProps = {
+  name: string,
+  location: Object,
+};
+
+export default (props: HeadingProps) =>
+  (<Heading>
     <Grid>
       <Row between="md">
         <Col md={8}>
-          <Name>Жилой комплекс «Полянка/44»</Name>
+          <Name>{props.name}</Name>
           <Address>
-              Район Якиманка, улица Большая Полянка, дом 44 • 119180
-            </Address>
+            {getLocation(props.location)}
+          </Address>
         </Col>
         <Col>
           <Button>В избранное</Button>
         </Col>
       </Row>
     </Grid>
-  </Heading>
-  );
+  </Heading>);

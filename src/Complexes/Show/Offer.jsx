@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import styled from 'styled-components';
 import { Row } from 'react-flexbox-grid';
@@ -51,7 +53,13 @@ const Button = styled.button`
   border: none;
 `;
 
-export default props => (
+type OfferProps = {
+  count: number,
+  square: Object,
+  price: Object
+}
+
+export default (props: OfferProps) => (
   <Offer>
     <Title>{props.count}-комнатные квартиры</Title>
     <Label>Площадь</Label>

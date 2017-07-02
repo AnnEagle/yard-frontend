@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from './Header';
@@ -11,7 +13,7 @@ export default () => (
     <div className="App">
       <Header />
       <Route exact path="/" component={Complexes} />
-      <Route path="/complex" component={Complex} />
+      <Route path="/complex/:id" component={Complex} />
       <Footer />
     </div>
   </Router>
