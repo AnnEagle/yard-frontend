@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import styled from 'styled-components';
 import { Grid, Row, Col } from 'react-flexbox-grid';
@@ -39,12 +41,14 @@ const Img = styled.img`
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
 `;
 
+const PUBLIC_URL: string = process.env.PUBLIC_URL || '';
+
 export default () => (
   <Details>
     <Grid>
       <Row>
         <Col md={6}>
-          <Img src={`${process.env.PUBLIC_URL}/img/map.png`} />
+          <Img src={`${PUBLIC_URL}/img/map.png`} />
         </Col>
         <Col md={6}>
           <Block>

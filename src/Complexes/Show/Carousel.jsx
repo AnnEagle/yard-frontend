@@ -1,7 +1,10 @@
+// @flow
+
 import React from 'react';
 import styled from 'styled-components';
 import { Grid, Row } from 'react-flexbox-grid';
 import { getImage } from '../../api';
+import type { ComplexImage } from '../types';
 
 const Carousel = styled.section`
 `;
@@ -29,7 +32,11 @@ const Button = styled.button`
   color: #ffffff;
 `;
 
-export default props =>
+type CarouselProps = {
+  images: Array<ComplexImage>
+}
+
+export default (props: CarouselProps) =>
   (<Carousel>
     <Wrapper>
       {props.images.map(image => <img src={getImage(image.id, 256)} alt="1" />)}

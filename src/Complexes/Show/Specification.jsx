@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import styled from 'styled-components';
 import { Grid, Row, Col } from 'react-flexbox-grid';
@@ -53,7 +55,11 @@ function getMaxPrice(price) {
   return price ? price.to.rub : 0;
 }
 
-export default props =>
+type SpecificationType = {
+  statistics: Object
+}
+
+export default (props: SpecificationType) =>
   (<Specification>
     <Grid>
       <Title>Характеристики</Title>

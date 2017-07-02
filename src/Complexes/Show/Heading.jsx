@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import styled from 'styled-components';
 import { Grid, Row, Col } from 'react-flexbox-grid';
@@ -50,7 +52,12 @@ function getLocation({ subLocalityName, street, house, postalCode }) {
           ${postalCode ? ` • ${postalCode}` : ''}`;
 }
 
-export default props =>
+type HeadingProps = {
+  name: string,
+  location: Object,
+};
+
+export default (props: HeadingProps) =>
   (<Heading>
     <Grid>
       <Row between="md">

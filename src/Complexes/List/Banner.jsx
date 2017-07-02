@@ -1,5 +1,8 @@
+// @flow
+
 import React from 'react';
 import styled from 'styled-components';
+import compassLogo from '../../img/compass-development-logo.png';
 
 const Wrapper = styled.section`
   background-color: #161616;
@@ -17,5 +20,5 @@ const Banner = styled.img`
 
 export default () =>
   (<Wrapper>
-    <Banner src={`${process.env.PUBLIC_URL}/img/compass-development-logo.png`} />
+    <Banner src={compassLogo} alt="compassLogo" />
   </Wrapper>);

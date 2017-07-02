@@ -1,4 +1,7 @@
+// @flow
+
 import React from 'react';
+import type { Children } from 'react';
 import styled from 'styled-components';
 import { Grid } from 'react-flexbox-grid';
 import { Link } from 'react-router-dom';
@@ -48,7 +51,15 @@ const Info = styled.p`
   margin-right: 100.7px;
 `;
 
-export default props =>
+type CardProps = {
+  id: number,
+  image: string,
+  location: string,
+  name: string,
+  children: Children
+}
+
+export default (props: CardProps) =>
   (<Grid>
     <Card to={`/complex/${props.id}`}>
       <Img src={props.image} />
