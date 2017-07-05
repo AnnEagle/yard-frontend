@@ -37,7 +37,7 @@ class ComplexesList extends Component {
   };
 
   componentDidMount() {
-    get('/complexes?filter[state]=public').then(({ items: complexes = [] }) => {
+    get('/complexes?filter%5Bstate%5D=public').then(({ items: complexes = [] }) => {
       this.setState({ complexes });
     });
   }

@@ -1,12 +1,12 @@
 // @flow
 
-const apiUrl = 'https://api.jqestate.ru/v1';
-const imagesUrl = 'https://images.jqestate.ru';
+const apiUrl = 'https://yard.moscow/api/v1';
+const imagesUrl = 'https://s3-eu-central-1.amazonaws.com/yard-images';
 
 export function get(resource: string): Promise<*> {
   return fetch(`${apiUrl}${resource}`).then(res => res.json());
 }
 
 export function getImage(id: string, size: number): string {
-  return `${imagesUrl}/${id}-jqestate-${size}`;
+  return `${imagesUrl}/${id}-${size}`;
 }
