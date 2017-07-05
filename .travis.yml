@@ -19,11 +19,6 @@ deploy:
   provider: script
   skip_cleanup: true
   script:
-    - echo "raz"
-    - echo "dva"
-    - echo "tri"
-    # - yarn build
-    # - now build --public --token $NOW_TOKEN --name yard-frontend
-    # - now alias --token $NOW_TOKEN --force
+    - yarn build && now build --public --token $NOW_TOKEN --name yard-frontend && now alias --token $NOW_TOKEN --force
   on:
     branch: feature-ci
