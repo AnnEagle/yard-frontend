@@ -19,6 +19,6 @@ deploy:
   provider: script
   skip_cleanup: true
   script:
-    - yarn build && now build --public --token $NOW_TOKEN --name yard-frontend && now alias --token $NOW_TOKEN --force
+    - yarn build && yarn travis-deploy
   on:
     branch: feature-ci

@@ -31,6 +31,11 @@
     "eject": "react-scripts eject",
     "prepush": "eslint src/ --ext .js,.jsx",
     "lint": "eslint --ext=js,jsx src",
-    "flow": "flow"
+    "flow": "flow",
+    "deploy": "now ./build --public --name yard-frontend && now alias",
+    "travis-deploy": "now ./build --public --name yard-frontend --token $NOW_TOKEN && now alias --token $NOW_TOKEN"
+  },
+  "now": {
+    "alias": "ann-compass"
   }
 }
