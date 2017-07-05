@@ -9,6 +9,7 @@ cache:
 
 install:
   - yarn install
+  - yarn flow-typed install
 
 scripts:
   - lint
