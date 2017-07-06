@@ -2,18 +2,13 @@ language: node_js
 node_js:
   - "node"
 
-cache:
-  yarn: true
-  directories:
-    - "node_modules"
-
 install:
   - yarn install
   - yarn flow-typed install
 
-scripts:
-  - lint
-  - flow
+script:
+  - yarn lint
+  - yarn flow
 
 deploy:
   provider: script
